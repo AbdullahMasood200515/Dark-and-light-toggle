@@ -1,0 +1,261 @@
+/* Theme Styles */
+.light {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.dark {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light .header {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.dark .header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  background-color: #16213e;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.header-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Main Content */
+.container {
+  padding: 40px 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Filter Buttons */
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.light .filter-btn {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+}
+
+.light .filter-btn.active {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.dark .filter-btn {
+  background-color: #2d3561;
+  color: #ffffff;
+}
+
+.dark .filter-btn.active {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.filter-btn:hover {
+  opacity: 0.8;
+}
+
+/* Extensions Grid */
+.extensions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Extension Card */
+.extension-card {
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.light .extension-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+}
+
+.dark .extension-card {
+  background-color: #2d3561;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.extension-card:hover {
+  transform: translateY(-4px);
+}
+
+.light .extension-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .extension-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.extension-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  object-fit: contain;
+  padding: 4px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: inherit;
+}
+
+.light .card-title {
+  color: #1a1a1a;
+}
+
+.dark .card-title {
+  color: #ffffff;
+}
+
+.card-description {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.light .card-description {
+  color: #666;
+}
+
+.dark .card-description {
+  color: #bbb;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.remove-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.light .remove-btn {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+}
+
+.light .remove-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.dark .remove-btn {
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+.dark .remove-btn:hover {
+  background-color: #252f4a;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  width: 48px;
+  height: 28px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0;
+}
+
+.toggle-switch.active {
+  background-color: #e74c3c;
+}
+
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+}
+
+.toggle-switch.active::after {
+  left: 22px;
+}
